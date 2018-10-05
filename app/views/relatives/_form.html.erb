@@ -11,37 +11,37 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :relative_name %>
+    <%= form.text_field :name, id: :relative_name, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :relation %>
-    <%= form.text_field :relation, id: :relative_relation %>
+    <%= form.text_field :relation, id: :relative_relation, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :date_of_birth %>
-    <%= form.text_field :date_of_birth, id: :relative_date_of_birth %>
+    <%= form.text_field :date_of_birth, id: :relative_date_of_birth, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :education %>
-    <%= form.text_field :education, id: :relative_education %>
+    <%= form.text_field :education, id: :relative_education, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :occupation %>
-    <%= form.text_field :occupation, id: :relative_occupation %>
+    <%= form.text_field :occupation, id: :relative_occupation, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :employee_id %>
-    <%= form.text_field :employee_id, id: :relative_employee_id %>
+    <%= form.text_field :employee_id, id: :relative_employee_id, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>
