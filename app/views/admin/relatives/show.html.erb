@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @relative.name %>
+</p>
+
+<p>
+  <strong>Relation:</strong>
+  <%= @relative.relation %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @relative.date_of_birth %>
+</p>
+
+<p>
+  <strong>Education:</strong>
+  <%= @relative.education %>
+</p>
+
+<p>
+  <strong>Occupation:</strong>
+  <%= @relative.occupation %>
+</p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @relative.employee %>
+</p>
+
+<%= link_to 'Edit', edit_admin_relative_path(@relative) %> |
+<%= link_to 'Back', admin_relatives_path %>

@@ -1,0 +1,47 @@
+<%= form_with(model: relative, local: true) do |form| %>
+  <% if relative.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(relative.errors.count, "error") %> prohibited this relative from being saved:</h2>
+
+      <ul>
+      <% relative.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :relative_name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :relation %>
+    <%= form.text_field :relation, id: :relative_relation, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :date_of_birth %>
+    <%= form.text_field :date_of_birth, id: :relative_date_of_birth, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :education %>
+    <%= form.text_field :education, id: :relative_education, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :occupation %>
+    <%= form.text_field :occupation, id: :relative_occupation, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :employee_id %>
+    <%= form.text_field :employee_id, id: :relative_employee_id, class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+<% end %>

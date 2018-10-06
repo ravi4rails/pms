@@ -1,0 +1,47 @@
+<%= form_with(model: education, local: true) do |form| %>
+  <% if education.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(education.errors.count, "error") %> prohibited this education from being saved:</h2>
+
+      <ul>
+      <% education.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :course_name %>
+    <%= form.text_field :course_name, id: :education_course_name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :institute_name %>
+    <%= form.text_field :institute_name, id: :education_institute_name, class: "form-control"  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :year_of_completion %>
+    <%= form.text_field :year_of_completion, id: :education_yesr_of_completion, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :field_of_study %>
+    <%= form.text_field :field_of_study, id: :education_field_of_study, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :more_info %>
+    <%= form.text_field :more_info, id: :education_more_info, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :employee_id %>
+    <%= form.text_field :employee_id, id: :education_employee_id, class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: "btn btn-primary"  %>
+  </div>
+<% end %>
